@@ -1,0 +1,34 @@
+<script>
+    // Var é global, e também local, ou seja está acessível fora do bloco de declaração
+
+    console.log('> existe x antes do bloco? ', x)
+
+    {
+        var x = 120
+    }
+
+    console.log('> existe x depois do bloco? ', x)
+
+
+    /*
+    // O JavaScript aplica o conceito hoisting / elevação...
+    // levando a declaração VAR para o nível mais alto do Script,
+    // permitindo o acesso mesmo sem haver a atribuição de conteúdo.
+    //
+    // Ou seja, é equivalente ao seguinte bloco
+    */
+
+    var _x
+
+    console.log('> existe x antes do bloco? ', _x)
+
+    {
+        _x = 120
+    }
+
+    console.log('> existe x depois do bloco? ', _x)
+
+
+
+
+</script>
