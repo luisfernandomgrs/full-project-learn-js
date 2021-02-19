@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Estudo de JavaScript</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+
+    <ul id="lista"></ul>
+
+    <script>
+        const animals = [
+            'Lion',
+            'cat',
+            'dog',
+            'eagle',
+            'chicken',
+            'horse',
+            'monkey',
+            'bird',
+            {
+                color: "Red",
+                Female: false
+            },
+            'snake',
+            'pig',
+            'tiger',
+            'alligartor'
+        ]
+
+        // acessar valores dentro do array
+        console.log(animals[0])
+
+        // 1º Capturando os dados no html...
+        animals.forEach(myDataBindList)
+
+        // 2º Capturando os dados no console...
+        for (let iCount = 0; iCount < animals.length; iCount++) {
+            console.log(animals[iCount])
+        }
+
+        // Funcção auxiliar para ForEach
+        function myDataBindList(item, index) {
+            document.getElementById('lista').innerHTML += "<li>" + item + "</li>"
+        }
+
+
+
+        /*
+        // Array, pode ser mistos...
+        // Podem conter propriedades simples, objetos...
+        */
+
+        const animalsFromAmazonia = [
+            'monkey',
+            'bird',
+            {
+                color: "Red",
+                Female: false
+            },
+            'snake',
+            'alligartor'
+        ]
+
+        
+        /*
+        // valiando tipo de dados de um array
+        */
+
+        console.log(typeof animalsFromAmazonia[1])
+        {
+            let sType = typeof animalsFromAmazonia[2]
+
+            if (sType === 'string')
+                console.log(animalsFromAmazonia[2])
+            else
+            {
+                console.log(animalsFromAmazonia[2].color)
+                console.log(animalsFromAmazonia[2].Female)
+            }                
+        }
+
+        console.log(animalsFromAmazonia[1])
+        console.log(animalsFromAmazonia[2].color)
+            
+    </script>
+</body>
+</html>

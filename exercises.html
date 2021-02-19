@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Estudo de JavaScript</title>
+</head>
+<body>
+    <h1>Exercises</h1>
+
+    <script>
+        // 1. declare uma variavel de nome weight
+        var weight
+
+        // 2. que tipo de dado é a variável acima
+        // -> undefined
+        // console.log(weight)
+        
+        /*
+        // 3. Declare uma variável e atribua valores para cada um dos dados:
+            * name: String
+            * age: Number (Integer)
+            * stars: Number (float)
+            * isSubscribed: Boolean
+        */
+        myFriend = {
+            name: "Luis Fernando",
+            age: 34,
+            stars: 2.5,
+            isSubscribed: true
+        }
+        console.log(`Meu amigo: ${myFriend.name}, Possui ${myFriend.age} anos; Deixou ${myFriend.stars} like's e ${myFriend.isSubscribed ? 'já' : 'ainda não'} é inscrito no canal.`)
+
+        // 4 ...
+        student = {
+            name: "Luis Fernando",
+            age: 34,
+            weight: 78.5,
+            isSubscribed: true
+        }
+
+        /*
+            5. Declare uma variável do tipo Array, de nome students e atribua
+               a ela nenhum valor, ou seja, sometne o Array vazio
+        */
+        let students = []
+
+        /*
+        6. Reatibua valor para a variável acima, colocando dentro dela o objeto student
+           da questão 4. (Não copiar e colar o objeto, mas usar o obeto criado e inserir
+           ele no array)
+        */
+        // Meu codigo...
+        students[0] = student
+        // Do instutor...
+        students[
+            student
+        ]
+        console.log(students[0])
+
+        student = {
+            name: "Luis Carlos",
+            age: 34,
+            weight: 78.5,
+            isSubscribed: true
+        }
+        students[1] = student
+
+        console.log(students[0])
+        console.log(students[1])
+
+    </script>
+</body>
+</html>

@@ -1,16 +1,14 @@
-const App = {
+// Object
 
-    /*
-    * Array (vetores)
-        * Um lista
-        * Agrupamento de dados
-        
-        ['Name', 32]
-    */
-    Init(){
-        // You code here
-
-    }
+const person = {
+    name: 'Pedro',
+    age: 45,
+    weight: 78.5,
+    isAdmin: true
 }
 
-App.Init()
+console.log(person)
+console.log(person.name)
+console.log(person.age)
+
+console.log(`${person.name} tem ${person.age} anos.`)
