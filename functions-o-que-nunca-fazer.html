@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning About Functions</title>
+</head>
+<body>
+    <h1>Learning About Functions</h1>
+    <script>
+
+        const soma = function(operador1, operador2){
+            total = operador1 + operador2;
+            return total
+        }
+
+        let number1, number2
+        number1 = 43
+        number2 = 90
+
+        console.log(`A soma dos argumentos 1: ${number1} e 2: ${number2} é igual à: ${soma(number1,number2)}`)
+
+        /*
+        // O QUE NUNCA FAZER...
+        // NUNCA declare uma variavel de definir o tipo: let, const ou var
+        // dentro de uma função.
+        //
+        // essa variavel IRÁ EXISTIR FORA DA FUNÇÃO, em sua aplicação INTEIRA
+        // podendo causar efeito colateral n código
+        */
+
+
+        console.log(total)
+        /*
+        // IMPORTANTE SOBRE SCOPO DE VARIAVEIS...
+        // O tipo var não sofre hoisting para fora da função
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning About Functions</title>
+</head>
+<body>
+    <h1>Learning About Function Constructor</h1>
+    <script>
+        /*
+        // Function() constructor
+        // * expressão new
+        // * criar novo objeto
+        // * this keyword
+        */
+
+        function Person(name) {
+            
+            // Formas diferentes para declarar funções
+            this.name = name
+            this.walk = () => {
+                return this.name + ", está andando...";
+            }
+            this.stopWalk = function () {
+                return this.name + ", está parado...";
+            }
+        }
+
+        // atribuindo funções construtoras para variáveis de objeto.
+        // Isso mais parece um ponteiro em C++...
+
+        const study1 = new Person("Luis Fernando"); console.log(study1.name);
+        const study2 = new Person("Luis Carlos"); console.log(study2.walk());
+        const study3 = new Person("Pedro Henrique"); console.log(study3.stopWalk());
+
+
+        //usando funções construtoras de string
+        let sTexto = new String('Um texto que será "quebrado" em um array de caracteres.');
+        console.log(sTexto);
+
+        //usando funções construtoras de string
+        let sTexto2 = 'Um texto que NÂO será "quebrado" em um array de caracteres.';
+        console.log(sTexto2);
+
+        //Função construtora de data... Tome cuidado com o fuso horário, por não informar a hora...
+        let dDiaNoCalendário = new Date("2021-01-01 19:42:27");
+        console.log(dDiaNoCalendário);
+
+        dDiaNoCalendário = new Date("2021-01-01");
+        console.log(dDiaNoCalendário);
+
+        dDiaNoCalendário = new Date();
+        console.log(dDiaNoCalendário);
+
+    </script>
+</body>
+</html>

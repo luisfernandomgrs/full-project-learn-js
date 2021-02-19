@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning About Functions</title>
+</head>
+<body>
+    <h1>Learning About Callback Functions</h1>
+    <script>
+        
+        // 1.
+        // Callback Function
+        // muito util quando queremos executar uma função
+        // em um processo de outra função
+
+        function sayMyName(name) {
+            console.log('Antes de executar a Callback.');
+
+            //Por ser um parametro na forma de função, deve ser executada como função...
+            name();
+
+            console.log('Após executar a Callback')
+        }
+        
+        sayMyName(
+            () => {
+                console.log('[Dentro da Callback] -> Estou dentro...')
+            }
+        )
+
+
+        // 2.
+        // Uma Callback dentro da propria função...
+
+        function sayHello(name) {
+            let myFrase = "[Dentro da Callback] -> Diga olá, ";
+
+            console.log('Antes de executar a Callback.');
+
+            function _name(name) {
+                console.log(myFrase + name)
+            };
+            _name(name);
+
+            console.log('Após executar a Callback');
+        }
+        
+        sayHello('Pedro Henrique')
+    </script>
+</body>
+</html>

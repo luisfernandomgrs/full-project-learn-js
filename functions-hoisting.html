@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning About Functions</title>
+</head>
+<body>
+    <h1>Learning About Functions - Hoisting</h1>
+    <script>
+        
+        /* 1. Funções Declaradas / Statment Function
+        // funções naturalmente sofre hoisting        
+        // function hoisting
+        */
+        sayMyName();
+
+        function sayMyName() {
+            console.log('Luis Fernando')
+        }
+
+        /* 2.
+        // O trecho abaixo não funcionará pois apenas a variável sayHello
+        // sofrerá Hoisting.
+        // Veja como ficaria esse bloco mesmo usando VAR, no Topico 2.1
+        //
+        // Funções de expressão não sofrem Hoisting
+        */
+
+        /*
+        sayHello();
+
+        sayHello = function() {
+            console.log('Hello user :)')
+        }
+        */
+
+        /* 2.1*/
+
+        var sayHello;
+
+        // sayHello(); //Irá gerar um: Uncaught TypeError
+
+        sayHello = function() {
+            console.log('Hello user :)')
+        }
+
+        sayHello(); //Funcionará normalmente, pois sayHello foi atribuida como função.
+
+    </script>
+</body>
+</html>
