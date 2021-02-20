@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning About Type Conversion Coersion</title>
+</head>
+<body>
+    <h1>Learning About - Type Conversion Coersion</h1>
+    <script>
+        /*
+        Type conversion (typecasting) vs Type Coersion
+        * Ambas servem para a Alteração de um tipo de dado para outro tipo
+
+        1. Type conversion -> Alteração explicita de um tipo para outro
+        2. Type Coersion -> Alteração implicita pelo próprio JavaScript
+        */        
+
+        // Exemplo de Type Coersion - Causada pelo JavaScript
+        console.log("9" + 7);
+
+        // Exemplo de Type Conversion/typecasting - Causada pelo JavaScript
+        console.log(Number("9") + 7);
+
+
+        let sValor = "123";
+        let nValor = 123;
+
+        // typecasting, mudando tipo de dados...
+        console.log(Number(sValor));
+        console.log(String(nValor));
+
+        // typecasting, calculando numero de caracteres...
+        console.log(String(nValor).length);
+
+        // typecasting, substituindo caracter em um array de string...
+        let nFloatValor = 123.578999;
+        console.log(String(nFloatValor).replace(".",","));
+
+        // typecasting, definindo limite de casas decimais...
+        console.log(nFloatValor.toFixed(2));
+
+        // typecasting, definindo casas decimais e alterando separador de casas decimais
+        console.log(nFloatValor.toFixed(2).replace(".",","));
+    </script>
+</body>
+</html>
