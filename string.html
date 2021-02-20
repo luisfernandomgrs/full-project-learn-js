@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning About Strings</title>
+</head>
+<body>
+    <h1>Learning About - Strings</h1>
+    
+    <script>
+        /*
+        Strings - Manipulando Strings        
+        */
+
+        let myFrase = "Today is Perfect to Learning JavaScript";
+
+        console.log(myFrase.toUpperCase());
+        console.log(myFrase.toUpperCase().toLocaleLowerCase());
+        console.log(myFrase);
+        console.log(myFrase.toLocaleLowerCase())
+
+
+        /*
+        Pesquisando textos...
+        */
+        let mMessageToVerify = "Nesta cadeia de caracteres, há algo escondido sobre CSS</br> que não sabemos?";
+
+        console.log(mMessageToVerify);
+        console.log(mMessageToVerify.indexOf("</br>"));        
+        console.log(mMessageToVerify[mMessageToVerify.indexOf("</br>")]);
+        console.log(mMessageToVerify.substr(mMessageToVerify.indexOf("</br>"),5));
+        console.log(mMessageToVerify.substring(55,60));
+
+        // Verificando a existencia de uma sub-string
+        console.log(mMessageToVerify.includes("Electron"));                 // retorna false
+        mMessageToVerify += " Adicionando a palavra: Electron";
+        console.log(mMessageToVerify.includes("Electron"));                 // retorna true
+        // includes é case-sensitive...
+        console.log(mMessageToVerify.includes("electron"));                 // retorna false
+        console.log(mMessageToVerify.toUpperCase().includes("ELECTRON"));   // retorna true
+
+
+        // Manupulando strings e Arrays
+        //
+        // Separe um texto que contem espaços em um novo array onde cada texto é uma
+        // posição no array. Depois disso, transforme o array em um texto e onde eram
+        // espaços, coloque _
+        //
+        // No item 3 está o que o instrutor fez... Me matou, :) kkkkk
+
+        let sPharse = "Lorem ipsum dolor sit amet consectetur adipisicing elit.";
+        let sCharFind = " "
+        let iIndexSpace = sPharse.trim().indexOf(sCharFind);
+        let aTextConvert = [];
+
+        // 1. Transformar o texto em array, quebrando por espaço...
+        console.log(sPharse);
+
+        while(iIndexSpace > 0) {
+            aTextConvert[aTextConvert.length] = sPharse.substring(0, iIndexSpace);
+
+            iIndexSpace++;
+            sPharse = sPharse.substring(iIndexSpace, sPharse.length);
+
+            iIndexSpace = sPharse.trim().indexOf(sCharFind);
+        }
+        if (sPharse.trim() !== "") aTextConvert[aTextConvert.length] = sPharse.trim();
+        sPharse = "";
+
+        console.log(aTextConvert);
+
+        // 2. Transformar o array em texto, concatenando com _
+        for (let iIndex = 0; iIndex < aTextConvert.length; iIndex++) {
+            sPharse += aTextConvert[iIndex];
+            if ((iIndex + 1) < aTextConvert.length)
+                sPharse += "_";
+        }
+        console.log(sPharse);
+
+
+        let pharse = "Eu quero viver o Amor!";
+        let myArray = pharse.split(" ");
+        let pharseWithUnderscore = myArray.join("_");
+        console.log(pharseWithUnderscore);
+
+    </script>
+</body>
+</html>

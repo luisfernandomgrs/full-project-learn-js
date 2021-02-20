@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning About Array</title>
+</head>
+<body>
+    <h1>Learning About - Array</h1>
+    
+    <script>
+        // manipulando Arrays
+        
+        // Criar array com construtor
+        let aClothing = new Array("shirt","trousers","sock","shoes");
+        let aNames = new Array(10);
+
+        console.log(aClothing);     // elementos definidos na contrução...
+        console.log(aNames);        // apenas o tamanho foi definido na construção...
+
+
+        // definindo um array mais complexo...
+        let aComplexArray = [
+            "a",
+            {type: "array"},
+            function() {
+                return "I can say Hello..."
+            }
+        ];
+        // console.log(aComplexArray);
+        for (let iPos = 0; iPos < aComplexArray.length; iPos++) {
+            console.log(aComplexArray[iPos]);
+        }
+
+        // forma simplificada e mais complexa do mesmo array acima...
+        console.log([
+            "a",
+            {type: "array"},
+            function() {
+                return "Say Hello to User, :)"
+            }
+        ][2]());
+
+        console.log([
+            "a",
+            {type: "I'm a property - ^-)"},
+            function() {
+                return "Say Hello to User, :)"
+            }
+        ][1].type);
+
+        // Transformar uma cadeia de caracteres em elementos de um array
+        let sText = "Meu Texto para transformar em Array.";
+
+        //
+        // Duas formas de obter um array de uma sttring...
+        let aTextArrayOne = Array(sText.split(""));
+        let aTextArrayTwo = Array.from(sText);
+
+        console.log(aTextArrayOne[0][1]);   // atribui o array ao elemento 0 (Zero)
+        console.log(aTextArrayTwo.length);  // atribui um array diretamente...
+
+
+        //
+        // Manipulando arrays
+
+        let techs = ["html","css","js","java","python","php"]
+
+        // adicionar um item no fim
+        techs.push("node.js")
+
+        // adicionar no começo
+        techs.unshift("sql");
+
+        console.log(techs);
+
+        // remover do fim
+        techs.pop();
+        console.log(techs);
+
+        // remover do começo
+        techs.shift();
+        console.log(techs);
+
+        // pegar somente alguns elementos do array
+        // sem modificar o array...
+        //
+        // 1º argumento - posição inicial, iniciado em 0 (zero)
+        // 2º argumento - último elemento, considerando a posição inicial em 1 (um)
+        console.log(techs.slice(0,4));
+        
+        // remover um ou mais itens do array
+        //
+        // 1º argumento - posição inicial, iniciado em 0 (zero)
+        // 2º argumento - remover X elementos
+        console.log(techs.splice(3,1));
+        console.log(techs);
+
+        // removendo um determinado item
+        let iPosition = techs.indexOf("js");    // indexOf é caseSensitive...
+        console.log(iPosition);
+        techs.splice(iPosition,1);
+
+        console.log(techs);
+    </script>
+</body>
+</html>
