@@ -8,10 +8,16 @@
 </head>
 <body>
     <h1>Learning About Functions</h1>
-    <script>
-
+    <script>        
         const soma = function(operador1, operador2){
+
+            // NUMC FAÇA ISSO...            
             total = operador1 + operador2;
+
+            // A Variável total passará a existir fora da função, para o trecho abaixo...
+            // mesmo fora da função/escopo de sua declaração
+
+            console.log(total);
             return total
         }
 
@@ -23,19 +29,17 @@
 
         /*
         // O QUE NUNCA FAZER...
-        // NUNCA declare uma variavel de definir o tipo: let, const ou var
-        // dentro de uma função.
-        //
-        // essa variavel IRÁ EXISTIR FORA DA FUNÇÃO, em sua aplicação INTEIRA
-        // podendo causar efeito colateral n código
+        
+        // NUNCA declare uma variavel sem atribuir o seu escopo
+        
+        // Sempre faça opção por var, let ou const; Prefira let ou const.
+        
+        // O tipo var sofre hoisting... Mas não para fora da função...
+        
+        // Não declarar o escopo de uma variável, causará efeitos colaterais...
         */
-
 
         console.log(total)
-        /*
-        // IMPORTANTE SOBRE SCOPO DE VARIAVEIS...
-        // O tipo var não sofre hoisting para fora da função
-        */
     </script>
 </body>
 </html>
